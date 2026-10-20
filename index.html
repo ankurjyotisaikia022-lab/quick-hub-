@@ -183,17 +183,43 @@ const supabaseClient = window.supabase.createClient(
 console.log("Quick Hub Supabase client initialized");
   
 async function loadProducts() {
+  const list = document.getElementById("product-list");
+
   const { data, error } = await supabaseClient
     .from("products")
     .select("*")
     .eq("is_available", true);
 
   if (error) {
-    console.error("Product loading error:", error.message);
+    list.textContent = "Products load failed";
+    console.error(error.message);
     return;
   }
 
-  console.log("Quick Hub products:", data);
+  if (!data || data.length === 0) {
+    list.textContent = "No products available yet.";
+    return;
+  }
+
+  list.replaceChildren();
+
+  data.forEach((product) => {
+    const card = document.createElement("div");
+    card.style.cssText =
+      "border:1px solid #ddd;border-radius:12px;padding:12px";
+
+    const name = document.createElement("h3");
+    name.textContent = product.name;
+
+    const price = document.createElement("p");
+    price.textContent = "Price: ₹" + product.price;
+
+    const stock = document.createElement("p");
+    stock.textContent = "Stock: " + product.stock;
+
+    card.append(name, price, stock);
+    list.appendChild(card);
+  });
 }
 
 loadProducts();
