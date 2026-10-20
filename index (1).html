@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#176b45">
+<meta name="description" content="Quick Hub in Dhakuakhana, Assam — fast food and fresh vegetables. Order by WhatsApp or phone.">
+<title>Quick Hub | Fast Food & Fresh Vegetables</title>
+<style>
+:root{--green:#176b45;--green2:#218653;--cream:#fffaf0;--ink:#17251d;--muted:#637067;--orange:#f4a340;--line:#e6ece5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}
+header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:1.35rem;color:var(--green)}
+.logo{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--green);color:#fff;font-size:1.5rem}
+nav{display:flex;gap:20px;align-items:center}nav a{text-decoration:none;font-size:.95rem;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;border:0;cursor:pointer}
+.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:#105537}.btn-light{background:#fff;color:var(--green);border:1px solid var(--line)}
+.hero{background:radial-gradient(circle at 85% 15%,#d8f2d9 0,transparent 28%),linear-gradient(135deg,#f7fff6,#fff7e9);padding:76px 0 68px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.eyebrow{display:inline-block;background:#e3f5e8;color:var(--green);font-size:.82rem;font-weight:900;padding:7px 12px;border-radius:999px;letter-spacing:.04em}
+h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.05;letter-spacing:-.04em;margin:18px 0}
+h1 span{color:var(--green)}.lead{font-size:1.12rem;color:#4e5d53;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 18px}.small-note{font-size:.88rem;color:var(--muted)}
+.hero-art{min-height:320px;border-radius:30px;background:linear-gradient(145deg,#176b45,#2c9a60);display:grid;place-items:center;position:relative;box-shadow:0 22px 55px #176b4526}
+.food-emoji{font-size:clamp(5rem,11vw,9rem);filter:drop-shadow(0 12px 10px #0002)}
+.float{position:absolute;background:#fff;border-radius:18px;padding:12px 15px;font-weight:800;box-shadow:0 10px 28px #0002}
+.float.one{top:22px;left:18px}.float.two{right:16px;bottom:22px}
+section{padding:68px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 34px}.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff;box-shadow:0 8px 24px #102d1710}
+.card .emoji{font-size:2.4rem}.card h3{margin:10px 0 8px}.card p{margin:0;color:var(--muted)}
+.menu-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.menu-item{border:1px solid var(--line);border-radius:18px;padding:18px 10px;text-align:center;background:#fff}
+.menu-item .emoji{font-size:2rem}.menu-item strong{display:block;margin-top:7px}
+.veggies{background:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.chip{padding:10px 15px;background:#fff;border:1px solid #e9e4d8;border-radius:999px;font-weight:700}
+.notice{background:#fff4dc;border:1px solid #f5dca5;border-radius:18px;padding:18px 20px;margin-top:24px;color:#634719}
+.order-box{background:var(--green);color:#fff;border-radius:28px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.order-box h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15;margin:0 0 10px}.order-box p{margin:0;color:#e0f1e5}
+.order-box .btn{white-space:nowrap}.order-box .btn-primary{background:#fff;color:var(--green)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{border:1px solid var(--line);border-radius:22px;padding:24px}.contact-card h3{margin-top:0}.contact-line{padding:8px 0;border-bottom:1px solid var(--line)}.contact-line:last-child{border:0}
+footer{background:#102b1d;color:#dce9df;padding:28px 0;text-align:center}footer p{margin:4px}
+.assamese{font-family:Arial,"Noto Sans",sans-serif}
+@media(max-width:760px){nav{gap:10px}nav a:not(.btn){display:none}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:240px}.cards{grid-template-columns:1fr}.menu-grid{grid-template-columns:repeat(2,1fr)}.order-box{padding:28px;flex-direction:column;align-items:flex-start}.contact-grid{grid-template-columns:1fr}section{padding:52px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="logo">Q</span><span>Quick Hub</span></a>
+    <nav><a href="#menu">Menu</a><a href="#vegetables">Vegetables</a><a href="#order">Order</a><a href="#contact">Contact</a><a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a></nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">FRESH • TASTY • LOCAL</span>
+      <h1>Your daily cravings,<br><span>sorted at Quick Hub.</span></h1>
+      <p class="lead">Delicious fast food and fresh vegetables, conveniently available in Dhakuakhana, Assam.</p>
+      <p class="lead assamese" lang="as">সোৱাদযুক্ত ফাষ্ট ফুড আৰু সতেজ শাক-পাচলি — এতিয়া আপোনাৰ ওচৰতে, Quick Hub-ত!</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        <a class="btn btn-light" href="tel:+916003786636">📞 Call Quick Hub</a>
+      </div>
+      <p class="small-note">📍 Dhakuakhana, Assam · Delivery in nearby areas subject to availability</p>
+    </div>
+    <div class="hero-art" aria-label="Illustration representing food and fresh vegetables">
+      <div class="float one">🥟 Tasty bites</div>
+      <div class="food-emoji">🍜🥬</div>
+      <div class="float two">🥕 Fresh picks</div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">WHY QUICK HUB?</span><h2>Good food. Fresh produce. Easy ordering.</h2><p class="assamese" lang="as">সোৱাদ, সতেজতা আৰু সহজ অৰ্ডাৰ — সকলো একে ঠাইতে।</p></div>
+    <div class="cards">
+      <article class="card"><div class="emoji">🍽️</div><h3>Tasty Fast Food</h3><p>Choose from popular snacks and meals made to satisfy your cravings.</p></article>
+      <article class="card"><div class="emoji">🥦</div><h3>Fresh Vegetables</h3><p>Everyday vegetables and seasonal picks for your kitchen.</p></article>
+      <article class="card"><div class="emoji">📲</div><h3>Easy to Order</h3><p>Message us on WhatsApp or call to check availability and place your order.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="menu" style="background:#f8fbf8">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">QUICK HUB MENU</span><h2>Fast Food Favourites</h2><p>Message us for today’s availability and prices.</p></div>
+    <div class="menu-grid">
+      <div class="menu-item"><div class="emoji">🥟</div><strong>Momos</strong></div>
+      <div class="menu-item"><div class="emoji">🍚</div><strong>Fried Rice</strong></div>
+      <div class="menu-item"><div class="emoji">🌯</div><strong>Roll</strong></div>
+      <div class="menu-item"><div class="emoji">🍝</div><strong>Pasta</strong></div>
+      <div class="menu-item"><div class="emoji">🍜</div><strong>Chow Mein</strong></div>
+    </div>
+    <div class="actions" style="justify-content:center"><a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20please%20share%20the%20fast%20food%20menu%20and%20prices." target="_blank" rel="noopener">Ask for Menu & Prices</a></div>
+  </div>
+</section>
+
+<section class="veggies" id="vegetables">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">FRESH VEGETABLES</span><h2>Fresh picks for your home</h2><p class="assamese" lang="as">আপোনাৰ পাকঘৰৰ বাবে দৈনন্দিন সতেজ শাক-পাচলি।</p></div>
+    <div class="chips"><span class="chip">🥔 Potato · আলু</span><span class="chip">🧅 Onion · পিয়াঁজ</span><span class="chip">🍅 Tomato · বিলাহী</span><span class="chip">🥬 Cabbage · বন্ধাকবি</span><span class="chip">🥦 Cauliflower · ফুলকবি</span><span class="chip">🥕 Carrot · গাজৰ</span><span class="chip">🥒 Cucumber · তিয়ঁহ</span><span class="chip">🌶️ Green Chilli · জলকীয়া</span><span class="chip">🌿 Seasonal Vegetables · বতৰৰ শাক-পাচলি</span></div>
+    <div class="actions" style="justify-content:center"><a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20I%20want%20to%20order%20fresh%20vegetables." target="_blank" rel="noopener">Order Fresh Vegetables</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="order-box">
+      <div><h2>Ready to order?</h2><p>Send us your items and quantity on WhatsApp. We’ll confirm availability and the total before accepting your order.</p><p class="assamese" lang="as">আপোনাৰ সামগ্ৰী আৰু পৰিমাণ WhatsApp-ত পঠিয়াওক। অৰ্ডাৰ গ্ৰহণ কৰাৰ আগতে উপলব্ধতা আৰু মুঠ খৰচ জনোৱা হ’ব।</p></div>
+      <a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+    </div>
+    <div class="notice"><strong>Delivery charge / ডেলিভাৰী মাচুল:</strong> A fixed delivery charge applies. The exact amount will be confirmed before your order is accepted. Delivery in Dhakuakhana and nearby areas is subject to availability.<br><span class="assamese" lang="as">নিৰ্দিষ্ট ডেলিভাৰী মাচুল প্ৰযোজ্য। অৰ্ডাৰ নিশ্চিত কৰাৰ আগতে সঠিক মাচুল জনোৱা হ’ব। Dhakuakhana আৰু ওচৰৰ অঞ্চলত সুবিধা অনুসৰি ডেলিভাৰী দিয়া হয়।</span></div>
+  </div>
+</section>
+
+
+<section id="order" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">PLACE AN ORDER</span><h2>Order directly from Quick Hub</h2><p>Fill in your details and we’ll review your order. Availability and delivery charge will be confirmed before acceptance.</p><p class="assamese" lang="as">তলৰ ফৰ্মখন পূৰণ কৰি অৰ্ডাৰ পঠিয়াওক। অৰ্ডাৰ গ্ৰহণ কৰাৰ আগতে সামগ্ৰীৰ উপলব্ধতা আৰু ডেলিভাৰী মাচুল নিশ্চিত কৰা হ’ব।</p></div>
+    <div class="contact-card" style="max-width:760px;margin:auto">
+      <form name="quick-hub-orders" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="quick-hub-orders">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <label>Customer name *<input required name="customer-name" autocomplete="name" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></label>
+          <label>Phone number *<input required type="tel" name="phone" autocomplete="tel" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></label>
+          <label>What would you like to order? *<select required name="items" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"><option value="">Choose an item</option><option>Momos</option><option>Fried Rice</option><option>Roll</option><option>Pasta</option><option>Chow Mein</option><option>Fresh vegetables</option><option>Mixed order</option></select></label>
+          <label>Quantity / item details *<input required name="quantity-details" placeholder="e.g. 2 plates, 1 kg potatoes" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></label>
+        </div>
+        <label style="display:block;margin-top:16px">Delivery address *<textarea required name="delivery-address" rows="3" autocomplete="street-address" placeholder="Village/area, road, house details" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></textarea></label>
+        <label style="display:block;margin-top:16px">Nearby landmark<input name="landmark" placeholder="e.g. near school/market" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></label>
+        <label style="display:block;margin-top:16px">Google Maps location link (optional)<input type="url" name="maps-location" placeholder="Paste your Google Maps link here" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></label>
+        <label style="display:block;margin-top:16px">Payment method *<select required name="payment-method" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"><option value="">Choose payment method</option><option value="UPI">UPI (Google Pay / PhonePe / other UPI app)</option><option value="Cash on delivery">Cash on delivery</option></select></label>
+        <p class="small-note">UPI payment details will be shared after we confirm your order. Cash can be paid on delivery. Please do not send payment before confirming the order with Quick Hub.</p>
+        <label style="display:block;margin-top:16px">Additional instructions<textarea name="notes" rows="2" placeholder="Any special request (optional)" style="display:block;width:100%;padding:12px;border:1px solid #ccd8ce;border-radius:10px;margin-top:6px"></textarea></label>
+        <p class="small-note">Please share only the location information needed for delivery. Do not include sensitive personal information.</p>
+        <button class="btn btn-primary" type="submit" style="width:100%;margin-top:10px">Submit Order</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#f8fbf8">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">GET IN TOUCH</span><h2>Contact Quick Hub</h2><p>We’re happy to help with your order.</p></div>
+    <div class="contact-grid">
+      <div class="contact-card"><h3>📍 Business Details</h3><div class="contact-line"><strong>Business:</strong> Quick Hub</div><div class="contact-line"><strong>Location:</strong> Dhakuakhana, Assam, India</div><div class="contact-line"><strong>Phone:</strong> <a href="tel:+916003786636">6003786636</a></div><div class="contact-line"><strong>WhatsApp:</strong> <a href="https://wa.me/916003786636" target="_blank" rel="noopener">Chat with us</a></div></div>
+      <div class="contact-card"><h3>🛍️ How to Order</h3><p>1. Message or call us.</p><p>2. Tell us the items and quantities you need.</p><p>3. We’ll confirm availability, delivery charge and total price.</p><p class="assamese" lang="as">১. আমাক মেছেজ বা ফোন কৰক।<br>২. প্ৰয়োজনীয় সামগ্ৰী আৰু পৰিমাণ জনাওক।<br>৩. উপলব্ধতা, ডেলিভাৰী মাচুল আৰু মুঠ দাম নিশ্চিত কৰক।</p><a class="btn btn-primary" href="https://wa.me/916003786636?text=Hello%20Quick%20Hub%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener">Order Now / এতিয়াই অৰ্ডাৰ কৰক</a></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><p><strong>Quick Hub</strong> · Dhakuakhana, Assam</p><p>Fast Food • Fresh Vegetables • Easy Ordering</p><p class="assamese" lang="as">Quick Hub বাছনি কৰাৰ বাবে ধন্যবাদ! 💚</p><p style="font-size:.8rem;opacity:.75">Please confirm current menu, prices and delivery availability with us before ordering.</p></div></footer>
+</body>
+</html>
