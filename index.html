@@ -170,7 +170,23 @@ footer{background:#102b1d;color:#dce9df;padding:28px 0;text-align:center}footer 
 </section>
 </main>
 <footer><div class="wrap"><p><strong>Quick Hub</strong> · Dhakuakhana, Assam</p><p>Fast Food • Fresh Vegetables • Easy Ordering</p><p class="assamese" lang="as">Quick Hub বাছনি কৰাৰ বাবে ধন্যবাদ! 💚</p><p style="font-size:.8rem;opacity:.75">Please confirm current menu, prices and delivery availability with us before ordering.</p></div></footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<section id="products" style="padding:40px 0;background:#fff">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">SHOP ONLINE</span>
+      <h2>Quick Hub Products</h2>
+      <p>Milk, Bread, Egg, Rice & Biscuit</p>
+    </div>
+    <div id="product-list"
+      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+      Loading products...
+    </div>
+  </div>
+</section>
+
 <script>
 const SUPABASE_URL = "https://nhlrfycpojswmifedfsb.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_g5agGD2omeNpvFVV0i8lVA__5vUB65_";
@@ -180,50 +196,63 @@ const supabaseClient = window.supabase.createClient(
   SUPABASE_PUBLISHABLE_KEY
 );
 
-console.log("Quick Hub Supabase client initialized");
-  
 async function loadProducts() {
   const list = document.getElementById("product-list");
+  list.textContent = "Loading products...";
 
   const { data, error } = await supabaseClient
     .from("products")
-    .select("*")
-    .eq("is_available", true);
+    .select("*");
 
   if (error) {
-    list.textContent = "Products load failed";
-    console.error(error.message);
+    list.textContent = "Products load failed: " + error.message;
     return;
   }
 
   if (!data || data.length === 0) {
-    list.textContent = "No products available yet.";
+    list.textContent = "No products found.";
     return;
   }
 
   list.replaceChildren();
 
-  data.forEach((product) => {
-    const card = document.createElement("div");
+  data.forEach(product => {
+    const card = document.createElement("article");
     card.style.cssText =
-      "border:1px solid #ddd;border-radius:12px;padding:12px";
+      "border:1px solid #e6ece5;border-radius:16px;padding:14px;background:white";
+
+    if (product.image_url) {
+      const img = document.createElement("img");
+      img.src = product.image_url;
+      img.alt = product.name || "Product";
+      img.style.cssText =
+        "width:100%;height:140px;object-fit:contain;border-radius:10px";
+      card.appendChild(img);
+    }
 
     const name = document.createElement("h3");
-    name.textContent = product.name;
+    name.textContent = product.name || "Product";
+    card.appendChild(name);
 
     const price = document.createElement("p");
-    price.textContent = "Price: ₹" + product.price;
+    price.textContent = "Price: ₹" + (product.price ?? "—");
+    card.appendChild(price);
+
+    if (product.category) {
+      const category = document.createElement("p");
+      category.textContent = product.category;
+      card.appendChild(category);
+    }
 
     const stock = document.createElement("p");
-    stock.textContent = "Stock: " + product.stock;
+    stock.textContent = "Stock: " + (product.stock ?? "—");
+    card.appendChild(stock);
 
-    card.append(name, price, stock);
     list.appendChild(card);
   });
 }
 
 loadProducts();
-  
 </script>
 </body>
 </html>
