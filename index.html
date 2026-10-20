@@ -167,6 +167,23 @@ const supabaseClient = window.supabase.createClient(
 );
 
 console.log("Quick Hub Supabase client initialized");
+  
+async function loadProducts() {
+  const { data, error } = await supabaseClient
+    .from("products")
+    .select("*")
+    .eq("is_available", true);
+
+  if (error) {
+    console.error("Product loading error:", error.message);
+    return;
+  }
+
+  console.log("Quick Hub products:", data);
+}
+
+loadProducts();
+  
 </script>
 </body>
 </html>
