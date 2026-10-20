@@ -156,5 +156,17 @@ footer{background:#102b1d;color:#dce9df;padding:28px 0;text-align:center}footer 
 </section>
 </main>
 <footer><div class="wrap"><p><strong>Quick Hub</strong> · Dhakuakhana, Assam</p><p>Fast Food • Fresh Vegetables • Easy Ordering</p><p class="assamese" lang="as">Quick Hub বাছনি কৰাৰ বাবে ধন্যবাদ! 💚</p><p style="font-size:.8rem;opacity:.75">Please confirm current menu, prices and delivery availability with us before ordering.</p></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://nhlrfycpojswmifedfsb.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_g5agGD2omeNpvFVV0i8lVA__5vUB65_";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+
+console.log("Quick Hub Supabase client initialized");
+</script>
 </body>
 </html>
